@@ -12,7 +12,7 @@ model = dict(
         in_chans=3,
         depths=[3, 9, 24, 3],
         dims=[96, 192, 384, 576],
-        drop_path_rate=0.4,
+        drop_path_rate=0.5,
         init_cfg=dict(
             type="Pretrained", checkpoint="pretrained/parcnetv2_base.pth.tar"
         ),
@@ -30,7 +30,7 @@ optimizer = dict(
     type="AdamW",
     lr=1e-4,
     betas=(0.9, 0.999),
-    weight_decay=0.05,
+    weight_decay=0.02,
     paramwise_cfg={"decay_rate": 0.9, "decay_type": "stage_wise", "num_layers": 12},
 )
 
