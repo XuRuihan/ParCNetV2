@@ -3,15 +3,15 @@
 This repo is the official PyTorch implementation of **ParCNetV2** proposed by our paper "[ParCNetV2: Oversized Kernel with Enhanced Attention](https://arxiv.org/abs/2211.07157)".
 
 
-![Figure1](assets\accuracy_latency.png)
-Figure 1: **Comparison between ParCNetV2 with the prevailing transformer (Swin), CNN (ConvNeXt), and large kernel CNNs (RepLKNet \& SLaK) when trained from scratch on ImageNet-1K at 224x224 resolution.**  Left: performance curve of model size vs. top-1 accuracy. Right: performance curve of inference latency vs. top-1 accuracy. \textbf{IG} represents using the \textit{implicit gemm} acceleration algorithm.
+![Figure1](/assets/accuracy_latency.png)
+Figure 1: **Comparison between ParCNetV2 with the prevailing transformer (Swin), CNN (ConvNeXt), and large kernel CNNs (RepLKNet \& SLaK) when trained from scratch on ImageNet-1K at 224x224 resolution.**  Left: performance curve of model size vs. top-1 accuracy. Right: performance curve of inference latency vs. top-1 accuracy. **IG** represents using the *implicit gemm* acceleration algorithm.
 
 ## Introduction
 
 Transformers have shown great potential in various computer vision tasks. By borrowing design concepts from transformers, many studies revolutionized CNNs and showed remarkable results. This paper falls in this line of studies. Specifically, we propose a new convolutional neural network, **ParCNetV2**, that extends the research line of ParCNetV1 by bridging the gap between CNN and ViT. It introduces two key designs: 1) **O**versized **C**onvolution (**OC**) with twice the size of the input, and 2) **B**ifurcate **G**ate **U**nit (**BGU**) to ensure that the model is input adaptive. Fusing OC and BGU in a unified CNN, ParCNetV2 is capable of flexibly extracting global features like ViT, while maintaining lower latency and better accuracy. Extensive experiments demonstrate the superiority of our method over other convolutional neural networks and hybrid models that combine CNNs and transformers.
 
 ## Overview
-![](assets\parc_evolution.png)
+![Figure2](/assets/parc_evolution.png)
 Figure 2: **The transitions from the original ParC V1 to ParC V2 block.** Compared with ParCNetV1, we first introduce oversized convolutions to further enhance capacity while simplifying architecture; then we design a bifurcate gate unit to improve efficiency and strengthen attention; finally, we propose a uniform local-global block and construct the whole network with this uniform block.
 
 
