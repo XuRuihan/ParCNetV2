@@ -87,10 +87,11 @@ This project is released under the MIT license. Please see the [LICENSE](/LICENS
 If you find this repository helpful, please consider citing:
 
 ```
-@inproceedings{liu2021Swin,
-  title={Swin Transformer: Hierarchical Vision Transformer using Shifted Windows},
-  author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+@inproceedings{xu2023parcnetv2,
+  title={Parcnetv2: Oversized kernel with enhanced attention},
+  author={Xu, Ruihan and Zhang, Haokui and Hu, Wenze and Zhang, Shiliang and Wang, Xiaoyu},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={5752--5762},
   year={2023}
 }
 ```
